@@ -46,7 +46,7 @@ export default function Footer() {
           ))}
         </div>
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: "2rem", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
-          <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.35)" }}>© 2024 Lumière Beauty Salon. Alle Rechte vorbehalten.</p>
+          <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.35)" }}>© 2026 MB-Kosmetik Beauty Salon. Alle Rechte vorbehalten.</p>
           <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.35)" }}>Made by BEGER-IT</p>
         </div>
       </div>
