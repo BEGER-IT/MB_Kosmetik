@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  beger-it-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_COMPANY_NAME=${NEXT_PUBLIC_COMPANY_NAME:-BEGER-IT Solutions}
+      - NEXT_PUBLIC_CONTACT_EMAIL=${NEXT_PUBLIC_CONTACT_EMAIL:-info@beger-it.de}
+      - NEXT_PUBLIC_CONTACT_PHONE=${NEXT_PUBLIC_CONTACT_PHONE}
+      - NEXT_PUBLIC_CONTACT_PHONE_DISPLAY=${NEXT_PUBLIC_CONTACT_PHONE_DISPLAY}
+      - NEXT_PUBLIC_WHATSAPP_NUMBER=${NEXT_PUBLIC_WHATSAPP_NUMBER}
+      - NEXT_PUBLIC_WHATSAPP_MESSAGE=${NEXT_PUBLIC_WHATSAPP_MESSAGE:-Hallo BEGER-IT, ich habe eine Frage:}
+      - NEXT_PUBLIC_GA_ID=${NEXT_PUBLIC_GA_ID}
+      - NEXT_PUBLIC_N8N_ENABLED=${NEXT_PUBLIC_N8N_ENABLED:-false}
+      - NEXT_PUBLIC_N8N_WEBHOOK_URL=${NEXT_PUBLIC_N8N_WEBHOOK_URL}
+      - NEXT_PUBLIC_N8N_BOT_NAME=${NEXT_PUBLIC_N8N_BOT_NAME:-BEGER-IT Bot}
+      - NEXT_PUBLIC_N8N_WELCOME_MESSAGE=${NEXT_PUBLIC_N8N_WELCOME_MESSAGE}
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - RESEND_FROM_NAME=${RESEND_FROM_NAME:-BEGER-IT}
+      - RESEND_FROM_EMAIL=${RESEND_FROM_EMAIL}
+      - RESEND_TO_EMAIL=${RESEND_TO_EMAIL}
+    container_name: beger-it-web
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
