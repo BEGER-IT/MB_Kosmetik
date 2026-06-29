@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Leistungen", href: "#leistungen" },
@@ -34,12 +35,7 @@ export default function Navbar() {
     <header style={headerStyle}>
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem", display: "flex", alignItems: "center", justifyContent: "space-between", height: "4.5rem" }}>
         <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "0.75rem" }}>
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-label="Lumière Logo">
-            <circle cx="18" cy="18" r="16" fill="#ffa7a7" opacity="0.25"/>
-            <path d="M18 8C18 8 26 14 26 20C26 24.4 22.4 28 18 28C13.6 28 10 24.4 10 20C10 14 18 8 18 8Z" fill="#ffa7a7"/>
-            <path d="M18 12C18 12 23 16 23 20C23 22.8 20.8 25 18 25C15.2 25 13 22.8 13 20C13 16 18 12 18 12Z" fill="white" opacity="0.7"/>
-            <circle cx="18" cy="20" r="3.5" fill="#e07575"/>
-          </svg>
+          <Image src="/pics/mb-logo.jpg" alt="MB-Kosmetik Logo" width={40} height={40} style={{ objectFit: "contain" }}/>
           <div>
             <div style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", fontWeight: 600, color: "var(--color-text)", letterSpacing: "-0.02em", lineHeight: 1 }}>MB-Kosmetik</div>
             <div style={{ fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--color-text-muted)", lineHeight: 1 }}>Beauty Salon</div>
