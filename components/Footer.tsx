@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer style={{ background: "#2a1f1f", color: "white", padding: "4rem 0 2rem" }}>
@@ -6,12 +8,7 @@ export default function Footer() {
         <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "3rem", marginBottom: "3rem" }} className="footer-grid">
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.5rem" }}>
-              <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
-                <circle cx="18" cy="18" r="16" fill="#ffa7a7" opacity="0.3"/>
-                <path d="M18 8C18 8 26 14 26 20C26 24.4 22.4 28 18 28C13.6 28 10 24.4 10 20C10 14 18 8 18 8Z" fill="#ffa7a7"/>
-                <path d="M18 12C18 12 23 16 23 20C23 22.8 20.8 25 18 25C15.2 25 13 22.8 13 20C13 16 18 12 18 12Z" fill="white" opacity="0.5"/>
-                <circle cx="18" cy="20" r="3.5" fill="#e07575"/>
-              </svg>
+              <Image src="/pics/mb-logo.jpg" alt="MB-Kosmetik Logo" width={60} height={60} style={{ objectFit: "contain" }}/>
               <div>
                 <div style={{ fontFamily: "var(--font-display)", fontSize: "1.4rem", fontWeight: 600, color: "white" }}>MB-Kosmetik</div>
                 <div style={{ fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(255,167,167,0.7)" }}>Beauty Salon</div>
