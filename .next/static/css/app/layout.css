@@ -586,6 +586,7 @@ video {
   --color-surface-2: #fff4f0;
 
   --color-text: #2a1f1f;
+  --color-text-yellow: #CCAF85;
   --color-text-muted: #7a5f5f;
   --color-text-faint: #b89090;
 
@@ -650,16 +651,5 @@ button { cursor: pointer; background: none; border: none; font: inherit; }
 @keyframes scrollDot {
   0%, 100% { transform: translateY(0); opacity: 1; }
   50% { transform: translateY(0.75rem); opacity: 0.3; }
-}
-
-@media (min-width: 768px) {
-
-  .md\:flex {
-    display: flex;
-  }
-
-  .md\:hidden {
-    display: none;
-  }
 }
 

@@ -3,15 +3,15 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer style={{ background: "#2a1f1f", color: "white", padding: "4rem 0 2rem" }}>
+    <footer style={{ background: "#0F384E", color: "white", padding: "4rem 0 2rem" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
         <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "3rem", marginBottom: "3rem" }} className="footer-grid">
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.5rem" }}>
               <Image src="/pics/mb-logo.jpg" alt="MB-Kosmetik Logo" width={60} height={60} style={{ objectFit: "contain" }}/>
               <div>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: "1.4rem", fontWeight: 600, color: "white" }}>MB-Kosmetik</div>
-                <div style={{ fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(255,167,167,0.7)" }}>Beauty Salon</div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: "1.4rem", fontWeight: 600, color: "#CCAF85" }}>MB-Kosmetik</div>
+                <div style={{ fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#CCAF85" }}>Beauty Salon</div>
               </div>
             </div>
             <p style={{ fontSize: "0.875rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.8, maxWidth: "32ch" }}>Ihr exklusiver Beauty Salon in Hamburg. Modernste Technologien, zertifizierte Expertinnen, unvergessliche Ergebnisse.</p>
@@ -30,7 +30,7 @@ export default function Footer() {
             { title: "Rechtliches", links: ["Impressum", "Datenschutz", "AGB", "Kontakt"] },
           ].map((col) => (
             <div key={col.title}>
-              <h4 style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--color-rose)", marginBottom: "1.25rem" }}>{col.title}</h4>
+              <h4 style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#CCAF85", marginBottom: "1.25rem" }}>{col.title}</h4>
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 {col.links.map((l) => (
                   <li key={l}><a href="#" style={{ fontSize: "0.875rem", color: "rgba(255,255,255,0.5)", textDecoration: "none" }}
